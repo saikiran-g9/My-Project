@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+        <meta charset="utf-8">
+        <meta name="google-signin-client_id" content="867908344362-p9re5l64grnvap898l7n9haolv304io1.apps.googleusercontent.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/74653e6d21.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+    </head>
+    <body>
+       
+        <form class="login">
+             <h1>Login</h1>
+        
+            <i class="fas fa-user"></i>
+            <input type="email" name="userid" placeholder="username" onclic/>
+            <i class="fas fa-lock"></i>
+            <input type="password" name="pswrd" placeholder="password"/><br>  
+            <input type="button" onclick="check(this.form)" value="Login"/>
+            <br>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            
+        </form>
+        <script language="javascript">
+            
+                    function check(form){
+					
+					var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+			
+					if(!new RegExp(mailformat).test(form.userid.value))
+					{
+					alert("Please enter valid email address!");   
+					form.userid.focus();
+					return false;
+					}
+
+                      if((form.userid.value == "kiran@gmail.com" && form.pswrd.value == "test")||(form.userid.value == "rupesh@yahoo.com" && form.pswrd.value == "passyl2")||(form.userid.value == "ashwinth@hotmail.org" && form.pswrd.value == "passyl3")){
+                         window.location.href='target.html';
+                      }
+
+                      else{
+						form.userid.focus();
+                        alert("Invalid Password or Username, please try again!")
+						return false;
+                }
+
+                }      
+        </script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </body>
+</html>

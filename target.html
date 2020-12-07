@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Welcome Amigo....</title>
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/target.css">
+	
+</head>
+<body style="padding: 20px">
+  <h1 class="title">Hi User, Welcome To Our Page..</h1>
+  <div class="tabContainer">
+    <div class="buttonContainer">
+        <button onclick="showPanel(0)">Upload</button>
+        <button onclick="showPanel(1)">Display</button>  
+    </div>
+    <div class="tabPanel">
+      <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+      <p class="butn"><label for="file" style="cursor: pointer;">Upload Image</label></p>
+    </div>
+    <div class="tabPanel">
+        <p><img id="output" type="image"/></p>   
+    </div>
+ </div>
+
+<script src="target.js"></script>
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+    alert("Your Image Was Uploaded Succesfully")
+    alert("please Check it in Display Tab")
+};
+</script>
+</body>
+</html>
