@@ -1,0 +1,71 @@
+body{
+    background: darkgrey;
+}
+.title{
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    text-align: center;
+}
+.tabContainer{
+    width: 100%;
+    height: 350px;
+    background: transparent;
+}
+.tabContainer .buttonContainer{
+    height: 15%;
+}
+.tabContainer .buttonContainer button{
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 10px;
+    
+    font-size: 18px;
+    background-color: #eee;
+    
+}
+.tabContainer .buttonContainer button:hover{
+    background-color: #d7d4d4;
+}
+.tabContainer .tabPanel{
+    height: 85%;
+    
+    color: white;
+    text-align: center;
+    padding-top: 105px;
+    box-sizing: border-box;
+    
+    font-size: 22px;
+    display: none;
+}
+.tabPanel .butn{
+    margin-top: 150px;
+   margin-left: 650px;
+    justify-content: center;
+   padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    width: 130px;
+    height: 20px;
+    color: black;
+    border-radius: 7px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: grey;
+    transition: 0.4s;
+}
+.tabPanel .butn:hover {
+    background: #d7d4d4;
+    
+}
+img[type="image"]{
+width:200px;
+height:200px;
+background-size:contain;
+background-position:center;
+border-radius:50%;
+border: 5px solid white;
+}
